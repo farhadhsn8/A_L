@@ -32,7 +32,10 @@ SOURCES += \
     vertex.cpp \
     dfaedge.cpp \
     dfavertex.cpp \
-    dfam.cpp
+    dfam.cpp \
+    tedge.cpp \
+    tvertex.cpp \
+    turm.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,7 +45,10 @@ HEADERS += \
     vertex.h \
     dfaedge.h \
     dfavertex.h \
-    dfam.h
+    dfam.h \
+    tedge.h \
+    tvertex.h \
+    turm.h
 
 FORMS += \
         mainwindow.ui
