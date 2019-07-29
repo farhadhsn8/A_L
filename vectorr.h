@@ -5,19 +5,19 @@
 namespace AL
 {
 
-class Vectorr
+class vectorr
 {
 public:
-     Vectorr(double x = 0, double y = 0) : x(x), y(y) {}
+     vectorr(double x = 0, double y = 0) : x(x), y(y) {}
      double getx();
      double gety();
      void setx(double);
      void sety(double);
-     Vectorr neg();
-     Vectorr operator-();
+     vectorr neg();
+     vectorr operator-();
      double size();
-     Vectorr sub(Vectorr);
-     Vectorr operator-(Vectorr);
+     vectorr sub(vectorr);
+     vectorr operator-(vectorr);
      bool isZero();
      std::string toString();
 private:

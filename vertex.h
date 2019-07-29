@@ -2,7 +2,7 @@
 #define VERTEX_H
 #include "object.h"
 #include <string>
-#include "Vectorr.h"
+#include "vectorr.h"
 #include <vector>
 
 
@@ -11,7 +11,8 @@ namespace AL
 class vertex : public object
 {
 public:
-    vertex(std::string=" ",int=0);
+    vertex(std::string s=" ",int a=0) : name(s),mood(0)
+    {}
 
     virtual void draw();
     virtual void deleteobj();
@@ -19,7 +20,7 @@ public:
     std::string getname();
     void setmood(int);
     int getmood();
-    bool satisfy(Vectorr);
+    bool satisfy(vectorr);
     private:
     std::string name;
     int mood;//0 is normal ,1 start ,2 final

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "dfam.h"
+#include <QMessageBox>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,7 +17,3 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_okbtn_clicked()
-{
-
-}

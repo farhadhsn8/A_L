@@ -1,19 +1,22 @@
 #ifndef OBJECT_H
 #define OBJECT_H
-#include "Vectorr.h"
+#include "vectorr.h"
 namespace AL
 {
 class object
 {
 private:
-    Vectorr position;
+    vectorr position;
 public:
-    object();
-    Vectorr getposition();
-    void setPosition(Vectorr);
+    object()
+    {
+
+    }
+    vectorr getposition();
+    void setPosition(vectorr);
     virtual void draw();
     virtual void deleteobj();
-    virtual bool satisfy (Vectorr) = 0;
+    virtual bool satisfy (vectorr) = 0;
 };
 }
 

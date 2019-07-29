@@ -29,7 +29,7 @@ int vertex::getmood()
 {
     return mood;
 }
-bool vertex::satisfy(Vectorr)
+bool vertex::satisfy(vectorr)
 {
     return true;
 }

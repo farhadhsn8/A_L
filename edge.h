@@ -10,19 +10,14 @@ class edge : public object
 public:
     edge()
     {
-        from=NULL;
-        to=NULL;
+
     }
-    void setfrom (vertex *);
-    vertex * getfrom ();
-    void setto (vertex *);
-    vertex * getto ();
+
     virtual void draw();
     virtual void deleteobj();
-    virtual bool satisfy (Vectorr) = 0;
+    virtual bool satisfy (vectorr);
 private:
-    vertex * from;
-    vertex * to;
+
 
 };
 }

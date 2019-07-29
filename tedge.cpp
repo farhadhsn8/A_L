@@ -1,6 +1,6 @@
 #include "tedge.h"
 using namespace AL;
-bool tedge::satisfy()
+bool tedge::satisfy(vectorr)
 {
     return true;
 }
@@ -34,4 +34,20 @@ void tedge::setc3(char a)
 {
     if (a=='R'|| a=='r' ||a=='L' ||a=='l' )
         c3=a;
+}
+void tedge::setfrom(tvertex * f)
+{
+    from=f;
+}
+tvertex* tedge::getfrom()
+{
+    return from;
+}
+void tedge::setto(tvertex * t)
+{
+    to =t;
+}
+tvertex* tedge::getto()
+{
+    return to;
 }

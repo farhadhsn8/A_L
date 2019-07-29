@@ -4,13 +4,13 @@
 #include "dfaedge.h"
 namespace AL
 {
+class dfaedge;
 class dfavertex : public vertex
 {
 public:
-    dfavertex()
+    dfavertex(dfaedge * a=NULL ,dfaedge * b=NULL) : to0(a),to1(b)
     {
-        to1=NULL;
-        to0=NULL;
+
     }
     void setto0 (dfaedge *);
     dfaedge * getto0 ();

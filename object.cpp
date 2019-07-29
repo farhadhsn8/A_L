@@ -2,12 +2,12 @@
 
 using namespace AL;
 
-Vectorr object::getposition()
+vectorr object::getposition()
 {
     return position;
 }
 
-void object::setPosition(Vectorr u)
+void object::setPosition(vectorr u)
 {
      position = u;
 }

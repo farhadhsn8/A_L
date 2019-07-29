@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "dfam.h"
+#include "turm.h"
+#include "lab.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,10 +16,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
-
-private slots:
-    void on_okbtn_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -5,13 +5,18 @@
 #include "tedge.h"
 namespace AL
 {
+class tedge;
 class tvertex : public vertex
 {
 public:
-    tvertex();
+    tvertex()
+    {
+
+    }
     void settoedges (tedge *);
-private:
     std::vector < tedge * > toedges;
+private:
+
 
 };
 }

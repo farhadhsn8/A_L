@@ -4,12 +4,17 @@
 #include <vector>
 #include "dfaedge.h"
 #include "dfavertex.h"
+#include <iostream>
 namespace AL
 {
 class dfam
 {
+
 public:
-    dfam();
+    dfam()
+    {
+        std::cout << "dfam created !"<<std::endl;
+    }
     void setinputs(std::string);
     std::string getinputs ();
     bool getresult();

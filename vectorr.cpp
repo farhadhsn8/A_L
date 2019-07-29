@@ -1,56 +1,56 @@
-#include "Vectorr.h"
+#include "vectorr.h"
 #include <iostream>
 using namespace AL;
 using namespace std;
 
-double Vectorr::getx()
+double vectorr::getx()
 {
     return x;
 }
-double Vectorr::gety()
+double vectorr::gety()
 {
     return y;
 }
 
-void Vectorr::setx(double xx)
+void vectorr::setx(double xx)
 {
     x = xx;
 }
 
-void Vectorr::sety(double yy)
+void vectorr::sety(double yy)
 {
     y = yy;
 }
-Vectorr Vectorr::neg()
+vectorr vectorr::neg()
 {
-    return Vectorr(-x, -y);
+    return vectorr(-x, -y);
 }
-Vectorr Vectorr::operator-()
+vectorr vectorr::operator-()
 {
-    return Vectorr(-x, -y);
+    return vectorr(-x, -y);
 }
 
-double Vectorr::size()
+double vectorr::size()
 {
     return sqrt(x * x + y * y);
 }
 
 
-Vectorr Vectorr::sub(Vectorr u)
+vectorr vectorr::sub(vectorr u)
 {
-    return Vectorr (x-u.x,y-u.y);
+    return vectorr (x-u.x,y-u.y);
 }
 
-Vectorr Vectorr::operator-(Vectorr u)
+vectorr vectorr::operator-(vectorr u)
 {
     return sub(u);
 }
-bool Vectorr::isZero()
+bool vectorr::isZero()
 {
     return size() < 0.001;
 }
 
-std::string Vectorr::toString()
+std::string vectorr::toString()
 {
   std::string result =
       "(" + std::to_string(x) + "," + std::to_string(y) + ")";

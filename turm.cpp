@@ -9,7 +9,7 @@ void turm::settinputs(string s)
 
 string turm::gettinputs()
 {
-    return tinputs
+    return tinputs;
 }
 
 void turm::add_tedge()

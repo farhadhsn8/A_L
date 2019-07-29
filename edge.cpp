@@ -3,22 +3,11 @@
 #include <string>
 using namespace std;
 using namespace AL;
-void edge::setfrom(vertex * f)
+bool edge::satisfy(vectorr)
 {
-    from=f;
+    return true;
 }
-vertex* edge::getfrom()
-{
-    return from;
-}
-void edge::setto(vertex * t)
-{
-    to =t;
-}
-vertex* edge::getto()
-{
-    return to;
-}
+
 void edge::draw()
 {
 

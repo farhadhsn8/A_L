@@ -1,6 +1,6 @@
 #include "dfaedge.h"
 using namespace AL;
-bool dfaedge::satisfy(Vectorr)
+bool dfaedge::satisfy(vectorr)
 {
     return true;
 }
@@ -11,4 +11,20 @@ char dfaedge::getdweight()
 void dfaedge::setdweight(char c)
 {
     dweight=c;
+}
+void dfaedge::setfrom(dfavertex * f)
+{
+    from=f;
+}
+dfavertex* dfaedge::getfrom()
+{
+    return from;
+}
+void dfaedge::setto(dfavertex * t)
+{
+    to =t;
+}
+dfavertex* dfaedge::getto()
+{
+    return to;
 }
