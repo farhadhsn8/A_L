@@ -35,9 +35,7 @@ SOURCES += \
     dfam.cpp \
     tedge.cpp \
     tvertex.cpp \
-    turm.cpp \
-    lab.cpp \
-    labrect.cpp
+    turm.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,12 +48,7 @@ HEADERS += \
     dfam.h \
     tedge.h \
     tvertex.h \
-    turm.h \
-    lab.h \
-    labrect.h
+    turm.h
 
 FORMS += \
-        mainwindow.ui \
-    lab.ui \
-    labrect.ui \
-    labrect.ui
+        mainwindow.ui

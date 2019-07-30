@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "dfam.h"
 #include <QMessageBox>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -25,9 +26,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_okbtn_clicked(bool checked)
 {
 
-    lab *l = new lab;
-    l->show();
-    hide();
+  //  lab *l = new lab;
+   // l->show();
+   // hide();
+
     if (ui->dfabtn->isChecked())
     {
         AL::dfam * dfa =new AL::dfam();

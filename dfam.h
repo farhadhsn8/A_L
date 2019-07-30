@@ -5,6 +5,7 @@
 #include "dfaedge.h"
 #include "dfavertex.h"
 #include <iostream>
+
 namespace AL
 {
 class dfam
