@@ -10,7 +10,10 @@ namespace AL
 class turm
 {
 public:
-    turm();
+    turm()
+    {
+
+    }
     void settinputs (std::string);
     std::string gettinputs();
     bool gettresult();

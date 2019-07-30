@@ -17,3 +17,31 @@ MainWindow::~MainWindow()
 
 
 
+
+
+
+
+
+void MainWindow::on_okbtn_clicked(bool checked)
+{
+
+    lab *l = new lab;
+    l->show();
+    hide();
+    if (ui->dfabtn->isChecked())
+    {
+        AL::dfam * dfa =new AL::dfam();
+    }
+    if (ui->turingbtn->isChecked())
+    {
+        AL::turm * tu =new AL::turm();
+    }
+    if (ui->nfabtn->isChecked())
+    {
+
+    }
+    if (ui->npdabtn->isChecked())
+    {
+
+    }
+}

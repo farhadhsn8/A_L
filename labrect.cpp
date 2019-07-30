@@ -11,7 +11,7 @@ labrect::labrect(QWidget *parent) :
 void labrect::paintEvent(QPaintEvent *event)
 {
     QPainter * painter = new QPainter (this);
-    painter->fillRect(10,70,981,611,Qt::yellow);
+    painter->fillRect(130,70,901,681,Qt::yellow);
 }
 labrect::~labrect()
 {

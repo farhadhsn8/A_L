@@ -11,7 +11,7 @@ namespace AL
 class vertex : public object
 {
 public:
-    vertex(std::string s=" ",int a=0) : name(s),mood(0)
+    vertex(std::string s=" ",int a=0) : name(s),mood(a)
     {}
 
     virtual void draw();
