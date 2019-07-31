@@ -13,7 +13,7 @@ public:
 
     }
 
-    virtual void draw();
+    virtual void draw(QPainter * painter);
     virtual void deleteobj();
     virtual bool satisfy (vectorr);
 private:

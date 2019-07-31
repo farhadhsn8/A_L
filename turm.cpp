@@ -118,7 +118,19 @@ bool turm::gettresult()
     return 0;
 }//22:37----24/4/1398
 
-
+void turm::draw(QPainter *painter)
+{
+    //draw dedges
+    for (auto te : tedges)
+    {
+        te->draw(painter);
+    }
+    //draw dvertexes
+    for (auto tv : tvertexes)
+    {
+        tv->draw(painter);
+    }
+}
 
 
 

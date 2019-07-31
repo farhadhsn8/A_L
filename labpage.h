@@ -21,7 +21,7 @@ public:
     void createlab();
 private:
     Ui::labpage *ui;
-    AL::machine ** mach;
+    AL::machine * mach;
 
 };
 

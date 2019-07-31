@@ -51,3 +51,7 @@ tvertex* tedge::getto()
 {
     return to;
 }
+void tedge::draw(QPainter *painter)
+{
+
+}

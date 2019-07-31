@@ -19,6 +19,7 @@ public:
     void setdweight(char='0');
     char getdweight();
     bool satisfy(vectorr);
+    void draw(QPainter * painter);
 private:
     char dweight;
     dfavertex * from;

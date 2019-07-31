@@ -12,7 +12,7 @@ void object::setPosition(vectorr u)
      position = u;
 }
 
-void object::draw()
+void object::draw(QPainter * painter)
 {
 
 }

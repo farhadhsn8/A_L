@@ -14,7 +14,7 @@ public:
     vertex(std::string s=" ",int a=0) : name(s),mood(a)
     {}
 
-    virtual void draw();
+    virtual void draw(QPainter * painter);
     virtual void deleteobj();
     void setname(std :: string );
     std::string getname();

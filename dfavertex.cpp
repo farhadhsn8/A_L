@@ -16,3 +16,8 @@ dfaedge * dfavertex::getto1()
 {
     return to1;
 }
+
+void dfavertex::draw(QPainter *painter)
+{
+
+}

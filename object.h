@@ -1,6 +1,7 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 #include "vectorr.h"
+#include <QPainter>
 namespace AL
 {
 class object
@@ -14,7 +15,7 @@ public:
     }
     vectorr getposition();
     void setPosition(vectorr);
-    virtual void draw();
+    virtual void draw(QPainter *);
     virtual void deleteobj();
     virtual bool satisfy (vectorr) = 0;
 };

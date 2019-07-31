@@ -6,6 +6,7 @@
 #include "dfavertex.h"
 #include <iostream>
 #include "machine.h"
+#include <QPainter>
 namespace AL
 {
 class dfam : public machine
@@ -25,6 +26,7 @@ public:
     void delete_dedge (dfaedge *);
     void add_dvertex ();
     void delete_dvertex (dfavertex *);
+    void draw(QPainter *painter);
 private:
     std::string inputs;
     bool result;

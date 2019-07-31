@@ -12,11 +12,12 @@ void labpage::paintEvent(QPaintEvent *event)
 {
     QPainter * painter =new QPainter (this);
     painter->fillRect(0,0,861,591,Qt::yellow);
+    mach->draw(painter);
 }
 
 void labpage::createlab()
 {
-    mach = new AL::machine*();
+    mach = new AL::machine();
 }
 labpage::~labpage()
 {

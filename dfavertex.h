@@ -16,6 +16,7 @@ public:
     dfaedge * getto0 ();
     void setto1 (dfaedge *);
     dfaedge * getto1 ();
+    void draw(QPainter * painter);
 private:
     dfaedge * to0;
     dfaedge * to1;

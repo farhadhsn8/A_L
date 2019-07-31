@@ -8,7 +8,7 @@ bool edge::satisfy(vectorr)
     return true;
 }
 
-void edge::draw()
+void edge::draw(QPainter * painter)
 {
 
 }

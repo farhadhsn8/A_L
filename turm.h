@@ -5,7 +5,7 @@
 #include "tvertex.h"
 #include <string>
 #include <vector>
-
+#include <QPainter>
 namespace AL
 {
 class turm : public machine
@@ -25,6 +25,7 @@ public:
     void settstart (tvertex *);
     tvertex * gettstart ();
     void meminit ();
+    void draw(QPainter *painter);
 private:
     std::string tinputs;
     bool tresult;

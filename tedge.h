@@ -26,6 +26,7 @@ public:
     tvertex * getto ();
     tvertex * from;
     tvertex * to;
+    void draw(QPainter *painter);
 private:
     char c1;
     char c2;

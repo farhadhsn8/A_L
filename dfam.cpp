@@ -105,6 +105,20 @@ bool dfam::getresult()
         }
     }
 }
+void dfam::draw(QPainter *painter)
+{
+    //draw dedges
+    for (auto de : dedges)
+    {
+        de->draw(painter);
+    }
+    //draw dvertexes
+    for (auto dv : dvertexes)
+    {
+        dv->draw(painter);
+    }
+
+}
 
 
 

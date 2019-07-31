@@ -7,3 +7,9 @@ void machine::hello()
     cout<< "helloo"<<endl;
 }
 
+void machine::draw()
+{
+    //dfaedges
+
+    //vertexes
+}

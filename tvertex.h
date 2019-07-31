@@ -15,6 +15,7 @@ public:
     }
     void settoedges (tedge *);
     std::vector < tedge * > toedges;
+    void draw(QPainter * painter);
 private:
 
 
