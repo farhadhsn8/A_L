@@ -5,10 +5,10 @@
 #include "dfaedge.h"
 #include "dfavertex.h"
 #include <iostream>
-
+#include "machine.h"
 namespace AL
 {
-class dfam
+class dfam : public machine
 {
 
 public:

@@ -1,6 +1,6 @@
 #ifndef TURM_H
 #define TURM_H
-
+#include "machine.h"
 #include "tedge.h"
 #include "tvertex.h"
 #include <string>
@@ -8,7 +8,7 @@
 
 namespace AL
 {
-class turm
+class turm : public machine
 {
 public:
     turm()

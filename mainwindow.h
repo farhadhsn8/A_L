@@ -2,9 +2,8 @@
 #define MAINWINDOW_H
 #include "dfam.h"
 #include "turm.h"
-#include "lab.h"
 #include <QMainWindow>
-
+#include "mainlab.h"
 namespace Ui {
 class MainWindow;
 }
@@ -20,10 +19,11 @@ public:
 
 
 private slots:
-    void on_okbtn_clicked(bool checked);
+    void on_okbtn_clicked();
 
 private:
     Ui::MainWindow *ui;
+    mainlab * ml;
 };
 
 #endif // MAINWINDOW_H
