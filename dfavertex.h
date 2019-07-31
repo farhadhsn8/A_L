@@ -17,9 +17,12 @@ public:
     void setto1 (dfaedge *);
     dfaedge * getto1 ();
     void draw(QPainter * painter);
+    vectorr getposition();
+    void setposition(vectorr);
 private:
     dfaedge * to0;
     dfaedge * to1;
+    vectorr position;
 };
 }
 #endif // DFAVERTEX_H

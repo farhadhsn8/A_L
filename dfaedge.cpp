@@ -29,6 +29,24 @@ dfavertex* dfaedge::getto()
     return to;
 }
 
+void dfaedge::setposition1(vectorr bb)
+{
+    position1 = bb;
+}
+vectorr dfaedge::getposition1()
+{
+    return position1;
+}
+
+void dfaedge::setposition2(vectorr bb)
+{
+    position2 = bb;
+}
+vectorr dfaedge::getposition2()
+{
+    return position2;
+}
+
 void dfaedge::draw(QPainter * painter)
 {
 

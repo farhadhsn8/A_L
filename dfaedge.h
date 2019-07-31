@@ -20,10 +20,16 @@ public:
     char getdweight();
     bool satisfy(vectorr);
     void draw(QPainter * painter);
+    void setposition1(vectorr);
+    vectorr getposition1 ();
+    void setposition2(vectorr);
+    vectorr getposition2();
 private:
     char dweight;
     dfavertex * from;
     dfavertex * to;
+    vectorr position1;
+    vectorr position2;
 };
 }
 #endif // DFAEDGE_H
