@@ -16,14 +16,13 @@ void turm::add_tedge()
 {
     tedge * a =new tedge();
     tedges.push_back(a);
-    a->draw();
+
 }
 
 void turm::add_tvertex()
 {
     tvertex * a =new tvertex();
     tvertexes.push_back(a);
-    a->draw();
 }
 
 void turm::delete_tedge(tedge * a)
@@ -123,11 +122,18 @@ void turm::draw(QPainter *painter)
     //draw dedges
     for (auto te : tedges)
     {
+        painter->setPen(QPen(Qt::green,3));
         te->draw(painter);
     }
     //draw dvertexes
     for (auto tv : tvertexes)
     {
+        if (tv->getmood()==0)
+            painter->setPen(QPen(Qt::yellow,4));
+        if (tv->getmood()==1)
+            painter->setPen(QPen(Qt::white,6));
+        if (tv->getmood()==2)
+            painter->setPen(QPen(Qt::red,6));
         tv->draw(painter);
     }
 }

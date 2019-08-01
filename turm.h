@@ -1,6 +1,5 @@
 #ifndef TURM_H
 #define TURM_H
-#include "machine.h"
 #include "tedge.h"
 #include "tvertex.h"
 #include <string>
@@ -8,7 +7,7 @@
 #include <QPainter>
 namespace AL
 {
-class turm : public machine
+class turm
 {
 public:
     turm()

@@ -16,5 +16,5 @@ void tvertex::setPosition(vectorr aa)
 }
 void tvertex::draw(QPainter *painter)
 {
-    painter->drawEllipse(getposition().getx(),getposition().gety(),35,35);
+    painter->drawEllipse(getposition().getx(),getposition().gety(),36,36);
 }

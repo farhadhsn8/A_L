@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QPainter>
-#include "machine.h"
 #include "dfam.h"
 #include "turm.h"
 namespace Ui {
@@ -21,7 +20,7 @@ public:
     void createlab();
 private:
     Ui::labpage *ui;
-    AL::machine * mach;
+    AL::dfam * dmach;
 
 };
 

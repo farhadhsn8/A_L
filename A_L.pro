@@ -36,7 +36,6 @@ SOURCES += \
     tedge.cpp \
     tvertex.cpp \
     turm.cpp \
-    machine.cpp \
     mainlab.cpp \
     labpage.cpp
 
@@ -52,7 +51,6 @@ HEADERS += \
     tedge.h \
     tvertex.h \
     turm.h \
-    machine.h \
     mainlab.h \
     labpage.h
 

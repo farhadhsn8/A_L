@@ -39,14 +39,14 @@ void dfam::add_dedge()
 {
     dfaedge * a =new dfaedge();
     dedges.push_back(a);
-    a->draw();
+
 }
 
 void dfam::add_dvertex()
 {
     dfavertex * a =new dfavertex();
     dvertexes.push_back(a);
-    a->draw();
+
 }
 
 void dfam::delete_dedge(dfaedge * a)
@@ -108,13 +108,21 @@ bool dfam::getresult()
 void dfam::draw(QPainter *painter)
 {
     //draw dedges
+
     for (auto de : dedges)
     {
+        painter->setPen(QPen(Qt::green,3));
         de->draw(painter);
     }
     //draw dvertexes
     for (auto dv : dvertexes)
     {
+        if (dv->getmood()==0)
+            painter->setPen(QPen(Qt::yellow,4));
+        if (dv->getmood()==1)
+            painter->setPen(QPen(Qt::white,6));
+        if (dv->getmood()==2)
+            painter->setPen(QPen(Qt::red,6));
         dv->draw(painter);
     }
 

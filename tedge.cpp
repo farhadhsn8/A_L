@@ -51,7 +51,48 @@ tvertex* tedge::getto()
 {
     return to;
 }
-void tedge::draw(QPainter *painter)
+void tedge::setposition1(vectorr bb)
 {
+    position1.setx(0);
+    position1.sety(0);
+    double circle = ((bb.getx()- getfrom()->getposition().getx())
+                     *(bb.getx()- getfrom()->getposition().getx()))+
+            ((bb.gety()-getfrom()->getposition().gety())*
+             (bb.gety()-getfrom()->getposition().gety()));
+    if(circle <= 324)
+    {
+        position1 = bb;
+    }
+
+}
+vectorr tedge::getposition1()
+{
+    return position1;
+}
+
+void tedge::setposition2(vectorr bb)
+{
+    position2.setx(0);
+    position2.sety(0);
+    double circle = ((bb.getx()- getto()->getposition().getx())
+                     *(bb.getx()- getto()->getposition().getx()))+
+            ((bb.gety()-getto()->getposition().gety())*
+             (bb.gety()-getto()->getposition().gety()));
+    if(circle <= 324)
+    {
+        position1 = bb;
+    }
+}
+vectorr tedge::getposition2()
+{
+    return position2;
+}
+
+void tedge::draw(QPainter * painter)
+{
+    if (position1.getx() != 0  && position1.gety() != 0 &&position2.getx() != 0  && position2.gety() != 0)
+    {
+        painter->drawLine(getposition1().getx(),getposition1().gety(),getposition2().getx(),getposition2().gety());
+    }
 
 }

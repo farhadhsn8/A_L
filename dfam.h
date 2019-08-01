@@ -5,17 +5,19 @@
 #include "dfaedge.h"
 #include "dfavertex.h"
 #include <iostream>
-#include "machine.h"
 #include <QPainter>
 namespace AL
 {
-class dfam : public machine
+class dfam
 {
 
 public:
     dfam()
     {
         std::cout << "dfam created !"<<std::endl;
+        dfaedge * d1 = new dfaedge();
+        d1->setposition1(vectorr(125,311));
+        d1->setposition2(vectorr(225,511));
     }
     void setinputs(std::string);
     std::string getinputs ();

@@ -26,11 +26,18 @@ public:
     tvertex * getto ();
     tvertex * from;
     tvertex * to;
+    void setposition1(vectorr);
+    vectorr getposition1 ();
+    void setposition2(vectorr);
+    vectorr getposition2();
     void draw(QPainter *painter);
+
 private:
     char c1;
     char c2;
     char c3;
+    vectorr position1;
+    vectorr position2;
 };
 }
 #endif // TEDGE_H

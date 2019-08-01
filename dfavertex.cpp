@@ -17,10 +17,16 @@ dfaedge * dfavertex::getto1()
     return to1;
 }
 
-vectorr dfavertex::getposition();
-void dfavertex::setposition(vectorr);
+vectorr dfavertex::getposition()
+{
+    return position;
+}
+void dfavertex::setposition(vectorr aa)
+{
+    position = aa;
+}
 
 void dfavertex::draw(QPainter *painter)
 {
-    painter->drawEllipse(getposition().getx(),getposition().gety(),35,35);
+    painter->drawEllipse(getposition().getx(),getposition().gety(),36,36);
 }
