@@ -17,8 +17,11 @@ public:
     explicit labpage(QWidget *parent = 0);
     ~labpage();
     void paintEvent(QPaintEvent *event);
+    void mousePressEvent(QMouseEvent * event);
+    void mouseMoveEvent(QMouseEvent * event);
     void createlab();
 private:
+    AL::object * selectedobject;
     Ui::labpage *ui;
     AL::dfam * dmach;
 

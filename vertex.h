@@ -20,7 +20,7 @@ public:
     std::string getname();
     void setmood(int);
     int getmood();
-    bool satisfy(vectorr);
+    bool satisfy(vectorr)=0;
     private:
     std::string name;
     int mood;//0 is normal ,1 start ,2 final

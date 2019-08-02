@@ -2,6 +2,7 @@
 #define DFAEDGE_H
 #include "edge.h"
 #include "dfavertex.h"
+#include "vectorr.h"
 namespace AL
 {
 class dfavertex;
@@ -9,11 +10,16 @@ class dfaedge : public edge
 {
 public:
 
-    dfaedge(char a ='0',dfavertex * b =NULL ,dfavertex * c =NULL, vectorr d = vectorr(10,10), vectorr e = vectorr(100,10))
-        :dweight(a),from(b),to(c),position1(d),position2(e)
+    dfaedge(char a ='0',dfavertex * b =NULL ,dfavertex * c =NULL,vectorr d=vectorr(1,0))
+        :dweight(a),from(b),to(c),normal(d)
     {
 
     }
+    vectorr getnormal();
+    void setnormal(vectorr);
+    vectorr surface();
+    double getlength();
+    void setlength (double);
     void setfrom (dfavertex *);
     dfavertex * getfrom ();
     void setto (dfavertex *);
@@ -22,16 +28,12 @@ public:
     char getdweight();
     bool satisfy(vectorr);
     void draw(QPainter * painter);
-    void setposition1(vectorr);
-    vectorr getposition1 ();
-    void setposition2(vectorr);
-    vectorr getposition2();
 private:
     char dweight;
     dfavertex * from;
     dfavertex * to;
-    vectorr position1;
-    vectorr position2;
+    vectorr normal;
+    double length;
 };
 }
 #endif // DFAEDGE_H

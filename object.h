@@ -14,7 +14,7 @@ public:
 
     }
     vectorr getposition();
-    void setPosition(vectorr);
+    void setposition(vectorr);
     virtual void draw(QPainter *);
     virtual void deleteobj();
     virtual bool satisfy (vectorr) = 0;

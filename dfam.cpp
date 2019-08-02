@@ -105,6 +105,27 @@ bool dfam::getresult()
         }
     }
 }
+
+object * dfam::getselectedobject(vectorr point)
+{
+    for (auto de : dedges)
+    {
+        if (de->satisfy(point))
+        {
+            return de;
+        }
+    }
+    for (auto dv : dvertexes)
+    {
+        if (dv->satisfy(point))
+        {
+            return dv;
+        }
+    }
+    return NULL;
+}
+
+
 void dfam::draw(QPainter *painter)
 {
     //draw dedges

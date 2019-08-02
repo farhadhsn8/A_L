@@ -17,13 +17,13 @@ dfaedge * dfavertex::getto1()
     return to1;
 }
 
-vectorr dfavertex::getposition()
+
+bool dfavertex::satisfy(vectorr a)
 {
-    return position;
-}
-void dfavertex::setposition(vectorr aa)
-{
-    position = aa;
+    if ((a - getposition()).size() < 40)
+        return true;
+      return false;
+
 }
 
 void dfavertex::draw(QPainter *painter)

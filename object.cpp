@@ -7,7 +7,7 @@ vectorr object::getposition()
     return position;
 }
 
-void object::setPosition(vectorr u)
+void object::setposition(vectorr u)
 {
      position = u;
 }

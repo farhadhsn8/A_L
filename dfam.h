@@ -16,16 +16,17 @@ public:
     {
         std::cout << "dfam  was created ##!"<<std::endl;
         dfaedge * d1 = new dfaedge();
-
+        d1->setlength(150);
+        d1->setnormal(vectorr(-1, 0));
         d1->setdweight('1');
         d1->setfrom(NULL);
-
+        d1->setposition(vectorr(109,300));
         d1->setto(NULL);
         dedges.push_back(d1);
         dfavertex * v1 = new dfavertex();
         v1->setmood(0);
         v1->setname("q1");
-        v1->setposition(vectorr(0,0));
+        v1->setposition(vectorr(640,460));
         dvertexes.push_back(v1);
     }
     void setinputs(std::string);
@@ -38,12 +39,14 @@ public:
     void add_dvertex ();
     void delete_dvertex (dfavertex *);
     void draw(QPainter *painter);
+    object * getselectedobject (vectorr point);
+    std::vector <dfaedge * > dedges;
+    std::vector <dfavertex *> dvertexes;
 private:
     std::string inputs;
     bool result;
     dfavertex * start;
-    std::vector <dfaedge * > dedges;
-    std::vector <dfavertex *> dvertexes;
+
 };
 }
 #endif // DFAM_H

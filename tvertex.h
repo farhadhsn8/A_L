@@ -19,6 +19,7 @@ public:
     vectorr getposition();
     void setPosition(vectorr);
     void draw(QPainter * painter);
+    bool satisfy(vectorr);
 private:
     vectorr position;
 

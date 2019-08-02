@@ -15,7 +15,7 @@ public:
     {
 
     }
-    bool satisfy(vectorr);
+    bool satisfy(vectorr );
     void setc1 (char);
     char getc1 ();
     void setc2 (char);

@@ -1,8 +1,22 @@
 #include "tedge.h"
 using namespace AL;
-bool tedge::satisfy(vectorr)
+bool tedge::satisfy(vectorr aa)
 {
-    return true;
+    double m,a,b,c,up,down;
+    m = (position2.gety() - position1.gety()) / (position2.getx() -  position1.getx());
+    b = -1;
+    a=m;
+    c= -1 * m * position1.getx() +  position1.gety();
+    up= (a * aa.getx()) +( b* aa.gety()) + c;
+    down = sqrt(a*a + b*b);
+    double dist;
+    dist = up / down;
+    if (dist < 0)
+        dist *= -1;
+    if (dist < 2)
+        return 1;
+    else
+        return 0;
 }
 
 char tedge::getc1()
@@ -53,16 +67,8 @@ tvertex* tedge::getto()
 }
 void tedge::setposition1(vectorr bb)
 {
-    position1.setx(0);
-    position1.sety(0);
-    double circle = ((bb.getx()- getfrom()->getposition().getx())
-                     *(bb.getx()- getfrom()->getposition().getx()))+
-            ((bb.gety()-getfrom()->getposition().gety())*
-             (bb.gety()-getfrom()->getposition().gety()));
-    if(circle <= 324)
-    {
+
         position1 = bb;
-    }
 
 }
 vectorr tedge::getposition1()
@@ -71,17 +77,8 @@ vectorr tedge::getposition1()
 }
 
 void tedge::setposition2(vectorr bb)
-{
-    position2.setx(0);
-    position2.sety(0);
-    double circle = ((bb.getx()- getto()->getposition().getx())
-                     *(bb.getx()- getto()->getposition().getx()))+
-            ((bb.gety()-getto()->getposition().gety())*
-             (bb.gety()-getto()->getposition().gety()));
-    if(circle <= 324)
-    {
-        position1 = bb;
-    }
+{    
+        position2 = bb;
 }
 vectorr tedge::getposition2()
 {
