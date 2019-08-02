@@ -9,7 +9,9 @@ class tvertex;
 class tedge : public edge
 {
 public:
-    tedge()
+
+    tedge(tvertex * a =NULL, tvertex* b =NULL,char c = ' ',char d= ' ',char e =' ',vectorr f =vectorr (10,10),vectorr g =vectorr (100,10))
+        :from(a),to(b),c1(c),c2(d),c3(e),position1(f),position2(g)
     {
 
     }

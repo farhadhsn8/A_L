@@ -8,7 +8,9 @@ class dfavertex;
 class dfaedge : public edge
 {
 public:
-    dfaedge()
+
+    dfaedge(char a ='0',dfavertex * b =NULL ,dfavertex * c =NULL, vectorr d = vectorr(10,10), vectorr e = vectorr(100,10))
+        :dweight(a),from(b),to(c),position1(d),position2(e)
     {
 
     }

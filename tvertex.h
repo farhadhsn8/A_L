@@ -9,7 +9,8 @@ class tedge;
 class tvertex : public vertex
 {
 public:
-    tvertex()
+
+    tvertex(vectorr a=vectorr (120,10)) : position(a)
     {
 
     }

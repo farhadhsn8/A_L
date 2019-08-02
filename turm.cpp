@@ -129,11 +129,11 @@ void turm::draw(QPainter *painter)
     for (auto tv : tvertexes)
     {
         if (tv->getmood()==0)
-            painter->setPen(QPen(Qt::yellow,4));
+            painter->setPen(QPen(Qt::blue,4));
         if (tv->getmood()==1)
-            painter->setPen(QPen(Qt::white,6));
-        if (tv->getmood()==2)
             painter->setPen(QPen(Qt::red,6));
+        if (tv->getmood()==2)
+            painter->setPen(QPen(Qt::black,6));
         tv->draw(painter);
     }
 }

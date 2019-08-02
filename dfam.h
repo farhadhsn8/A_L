@@ -14,10 +14,19 @@ class dfam
 public:
     dfam()
     {
-        std::cout << "dfam created !"<<std::endl;
+        std::cout << "dfam  was created ##!"<<std::endl;
         dfaedge * d1 = new dfaedge();
-        d1->setposition1(vectorr(125,311));
-        d1->setposition2(vectorr(225,511));
+
+        d1->setdweight('1');
+        d1->setfrom(NULL);
+
+        d1->setto(NULL);
+        dedges.push_back(d1);
+        dfavertex * v1 = new dfavertex();
+        v1->setmood(0);
+        v1->setname("q1");
+        v1->setposition(vectorr(0,0));
+        dvertexes.push_back(v1);
     }
     void setinputs(std::string);
     std::string getinputs ();

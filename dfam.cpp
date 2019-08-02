@@ -118,11 +118,11 @@ void dfam::draw(QPainter *painter)
     for (auto dv : dvertexes)
     {
         if (dv->getmood()==0)
-            painter->setPen(QPen(Qt::yellow,4));
+            painter->setPen(QPen(Qt::blue,4));
         if (dv->getmood()==1)
-            painter->setPen(QPen(Qt::white,6));
-        if (dv->getmood()==2)
             painter->setPen(QPen(Qt::red,6));
+        if (dv->getmood()==2)
+            painter->setPen(QPen(Qt::black,6));
         dv->draw(painter);
     }
 

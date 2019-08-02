@@ -22,6 +22,7 @@ private:
     Ui::labpage *ui;
     AL::dfam * dmach;
 
+
 };
 
 #endif // LABPAGE_H

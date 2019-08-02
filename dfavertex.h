@@ -8,7 +8,7 @@ class dfaedge;
 class dfavertex : public vertex
 {
 public:
-    dfavertex(dfaedge * a=NULL ,dfaedge * b=NULL) : to0(a),to1(b)
+    dfavertex(dfaedge * a=NULL ,dfaedge * b=NULL , vectorr c=vectorr(120,10)) : to0(a),to1(b),position(c)
     {
 
     }
