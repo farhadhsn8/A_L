@@ -6,24 +6,15 @@ void tvertex::settoedges(tedge * te)
 {
     toedges.push_back(te);
 }
-vectorr tvertex::getposition()
-{
-    return position;
-}
-void tvertex::setPosition(vectorr aa)
-{
-    position=aa;
-}
+
 bool tvertex::satisfy(vectorr a)
 {
-    double s= a.getx() - getposition().getx();
-    double t= a.gety() - getposition().gety();
-    double circle;
-    circle = s*s + t*t;
-    if (circle <= 324)
-        return 1;
-    else
-        return 0;
+    vectorr p;
+    p.setx(getposition().getx() + 18);
+    p.sety(getposition().gety() + 18);
+    if ((a - p).size() < 18)
+        return true;
+    return false;
 
 }
 void tvertex::draw(QPainter *painter)

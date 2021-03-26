@@ -1,22 +1,15 @@
 #include "tedge.h"
 using namespace AL;
-bool tedge::satisfy(vectorr aa)
+bool tedge::satisfy(vectorr u)
 {
-    double m,a,b,c,up,down;
-    m = (position2.gety() - position1.gety()) / (position2.getx() -  position1.getx());
-    b = -1;
-    a=m;
-    c= -1 * m * position1.getx() +  position1.gety();
-    up= (a * aa.getx()) +( b* aa.gety()) + c;
-    down = sqrt(a*a + b*b);
-    double dist;
-    dist = up / down;
-    if (dist < 0)
-        dist *= -1;
-    if (dist < 2)
-        return 1;
-    else
-        return 0;
+    vectorr s = surface();
+      double proj = (u - getposition()).dot(s);
+      if (proj < -getlength() / 2 || proj > getlength() / 2)
+        return false;
+      vectorr a1 = getposition() + s * proj;
+      if ((a1 - u).size() > 5)
+        return false;
+      return true;
 }
 
 char tedge::getc1()
@@ -65,31 +58,32 @@ tvertex* tedge::getto()
 {
     return to;
 }
-void tedge::setposition1(vectorr bb)
-{
 
-        position1 = bb;
-
-}
-vectorr tedge::getposition1()
+vectorr tedge::getnormal()
 {
-    return position1;
+    return normal;
 }
 
-void tedge::setposition2(vectorr bb)
-{    
-        position2 = bb;
-}
-vectorr tedge::getposition2()
+
+void tedge::setnormal(vectorr u)
 {
-    return position2;
+    normal =u.normalize();
 }
+
+vectorr tedge::surface()
+{
+    return vectorr(-normal.gety(), normal.getx());
+}
+
+double tedge::getlength() { return length; }
+
+void tedge::setlength(double len) { length = len; }
 
 void tedge::draw(QPainter * painter)
 {
-    if (position1.getx() != 0  && position1.gety() != 0 &&position2.getx() != 0  && position2.gety() != 0)
-    {
-        painter->drawLine(getposition1().getx(),getposition1().gety(),getposition2().getx(),getposition2().gety());
-    }
+    vectorr s = surface();
+    vectorr p1 = getposition() + s * (getlength() / 2);
+    vectorr p2 = getposition() - s * (getlength() / 2);
+    painter->drawLine(p1.getx(), p1.gety(), p2.getx(), p2.gety());
 
 }

@@ -66,7 +66,8 @@ void dfaedge::draw(QPainter * painter)
     vectorr p1 = getposition() + s * (getlength() / 2);
     vectorr p2 = getposition() - s * (getlength() / 2);
     painter->drawLine(p1.getx(), p1.gety(), p2.getx(), p2.gety());
-
+    painter->drawLine(getposition().getx(),getposition().gety(),getposition().getx()-10,getposition().gety()-10);
+    painter->drawLine(getposition().getx(),getposition().gety(),getposition().getx()-10,getposition().gety()+10);
 }
 
 

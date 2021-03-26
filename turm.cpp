@@ -72,7 +72,7 @@ tvertex * turm::gettstart()
     }
 }
 
-void turm::meminit()
+void turm::meminit()//30 taye avval ### ... baad az voroodi hm ###
 {
     for (int i=0;i<30;i++)
         mem[i]='#';
@@ -92,27 +92,27 @@ bool turm::gettresult()
     {
         counter++;
         bool changing=0;
-        for (int i=0 ; i< v->toedges.size(); i++)
+        for (int i=0 ; i< v->toedges.size(); i++)//yaal ha tak tak check mishavand
         {
-            if (mem[head] ==v->toedges[i]->getc1())
+            if (mem[head] ==v->toedges[i]->getc1())//agar avvalin vazn ba hafeze yki bood
             {
-                changing=1;
+                changing=1;//avaz shode
                 e=v->toedges[i];
                 mem[head] = e->getc2();
-                if ( e->getc3()=='L' || e->getc3()=='l')
+                if ( e->getc3()=='L' || e->getc3()=='l')//chap raftn
                     head--;
-                if ( e->getc3()=='R' || e->getc3()=='r')
+                if ( e->getc3()=='R' || e->getc3()=='r')//rast raftn
                     head++;
                 v=e->getto();
                 break;
             }
         }
-        if (changing==0)
+        if (changing==0)//halt dar noqteE bjoz payan
             return 0;
-        if (v->getmood()==2)
+        if (v->getmood()==2)//halt dar noqteye payan
             return 1;
     }
-    if (v->getmood()==2)
+    if (v->getmood()==2)//halt dar noqteye payan
         return 1;
     return 0;
 }//22:37----24/4/1398

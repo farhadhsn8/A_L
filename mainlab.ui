@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1050</width>
-    <height>659</height>
+    <width>1254</width>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -269,13 +269,52 @@
      <cursorShape>CrossCursor</cursorShape>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>20</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Pristina</family>
+      <pointsize>48</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;text here:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textedit">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>130</y>
+      <width>191</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textbrowser">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>370</y>
+      <width>191</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1050</width>
+     <width>1254</width>
      <height>21</height>
     </rect>
    </property>

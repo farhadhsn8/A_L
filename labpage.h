@@ -9,10 +9,12 @@ namespace Ui {
 class labpage;
 }
 
+class mainlab;
+
 class labpage : public QWidget
 {
     Q_OBJECT
-
+    friend mainlab;
 public:
     explicit labpage(QWidget *parent = 0);
     ~labpage();
@@ -24,6 +26,11 @@ private:
     AL::object * selectedobject;
     Ui::labpage *ui;
     AL::dfam * dmach;
+    AL::dfavertex * selectedvertex1;
+    QPoint pointofpress1;//mokhtasat noqte click shode
+    AL::dfavertex * selectedvertex2;
+    QPoint pointofpress2;//mokhtasat noqte click shode
+    int switchofvertex;//select baraye vasl shodn edge b vertex ha
 
 
 };

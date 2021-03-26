@@ -79,34 +79,34 @@ bool dfam::getresult()
     dfavertex * v = dfam::getstart();
     dfaedge * e;
 
-    for (int i=0;i<s.size();i++)
+    for (int i=0;i<s.size();i++)//voroodi b voroodi jlo mire
     {
         bool changestate=0;
-        if (s[i]==v->getto0()->getdweight())
+        if (s[i]==v->getto0()->getdweight())//agar ba voroodi yki bood vared yaal mishavad
         {
             e=v->getto0();
             v=e->getto();
             changestate=1;
         }
-        if (s[i]==v->getto1()->getdweight() && changestate==0)
+        if (s[i]==v->getto1()->getdweight() && changestate==0)//agar ba voroodi yki bood vared yaal mishavad
         {
             e=v->getto1();
             v=e->getto();
             changestate=1;
         }
-        if (changestate ==0)
+        if (changestate ==0)//halt dar noqteE bjoz final
             return 0;
         if(changestate==1 && (i==(s.size()-1)))
         {
-            if (v->getmood()==2)
+            if (v->getmood()==2)//final
                 return 1;
-            if (v->getmood()!=2)
+            if (v->getmood()!=2)//not final
                 return 0;
         }
     }
 }
 
-object * dfam::getselectedobject(vectorr point)
+object * dfam::getselectedobject(vectorr point)//object select shode ra pas midehad
 {
     for (auto de : dedges)
     {
@@ -125,6 +125,17 @@ object * dfam::getselectedobject(vectorr point)
     return NULL;
 }
 
+dfavertex * dfam::getselectedvertex(vectorr point)//vertex select shode ra pas midehad
+{
+    for (auto dv : dvertexes)
+    {
+        if (dv->satisfy(point))
+        {
+            return dv;
+        }
+    }
+    return NULL;
+}
 
 void dfam::draw(QPainter *painter)
 {

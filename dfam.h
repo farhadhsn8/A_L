@@ -6,21 +6,25 @@
 #include "dfavertex.h"
 #include <iostream>
 #include <QPainter>
+class labpage;
+class mainlab;
 namespace AL
 {
 class dfam
 {
 
+    friend labpage;
+    friend mainlab;
 public:
-    dfam()
+    dfam()//constructor
     {
         std::cout << "dfam  was created ##!"<<std::endl;
         dfaedge * d1 = new dfaedge();
-        d1->setlength(150);
-        d1->setnormal(vectorr(-1, 0));
+        d1->setlength(233);
+        d1->setnormal(vectorr(0, 1));
         d1->setdweight('1');
         d1->setfrom(NULL);
-        d1->setposition(vectorr(109,300));
+        d1->setposition(vectorr(450,300));
         d1->setto(NULL);
         dedges.push_back(d1);
         dfavertex * v1 = new dfavertex();
@@ -39,7 +43,8 @@ public:
     void add_dvertex ();
     void delete_dvertex (dfavertex *);
     void draw(QPainter *painter);
-    object * getselectedobject (vectorr point);
+    object * getselectedobject (vectorr point);//object select shode
+    dfavertex * getselectedvertex (vectorr point);//vertex select shode
     std::vector <dfaedge * > dedges;
     std::vector <dfavertex *> dvertexes;
 private:

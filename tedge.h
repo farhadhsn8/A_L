@@ -10,11 +10,16 @@ class tedge : public edge
 {
 public:
 
-    tedge(tvertex * a =NULL, tvertex* b =NULL,char c = ' ',char d= ' ',char e =' ',vectorr f =vectorr (10,10),vectorr g =vectorr (100,10))
-        :from(a),to(b),c1(c),c2(d),c3(e),position1(f),position2(g)
+    tedge(tvertex * a =NULL, tvertex* b =NULL,char c = ' ',char d= ' ',char e =' ')
+        :from(a),to(b),c1(c),c2(d),c3(e)
     {
 
     }
+    vectorr getnormal();
+    void setnormal(vectorr);
+    vectorr surface();
+    double getlength();
+    void setlength (double);
     bool satisfy(vectorr );
     void setc1 (char);
     char getc1 ();
@@ -28,18 +33,15 @@ public:
     tvertex * getto ();
     tvertex * from;
     tvertex * to;
-    void setposition1(vectorr);
-    vectorr getposition1 ();
-    void setposition2(vectorr);
-    vectorr getposition2();
     void draw(QPainter *painter);
 
 private:
     char c1;
     char c2;
+    vectorr normal;
+    double length;
     char c3;
-    vectorr position1;
-    vectorr position2;
+
 };
 }
 #endif // TEDGE_H

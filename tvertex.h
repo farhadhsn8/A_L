@@ -10,18 +10,16 @@ class tvertex : public vertex
 {
 public:
 
-    tvertex(vectorr a=vectorr (120,10)) : position(a)
+    tvertex()
     {
 
     }
     void settoedges (tedge *);
     std::vector < tedge * > toedges;
-    vectorr getposition();
-    void setPosition(vectorr);
     void draw(QPainter * painter);
     bool satisfy(vectorr);
 private:
-    vectorr position;
+
 
 };
 }

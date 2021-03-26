@@ -20,7 +20,10 @@ dfaedge * dfavertex::getto1()
 
 bool dfavertex::satisfy(vectorr a)
 {
-    if ((a - getposition()).size() < 40)
+    vectorr p;
+    p.setx(getposition().getx() + 18);
+    p.sety(getposition().gety() + 18);
+    if ((a - p).size() < 18)
         return true;
       return false;
 
